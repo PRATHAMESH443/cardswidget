@@ -36,9 +36,12 @@ type cardprops={
   zeroMinWidth?:	boolean;
   children?: React.ReactNode
   data?:any
-  titlestyles?:any
-  subtitle?:any
+  titleStyles?:any
+  subtitleStyles?:any
   contentdata:any
+  ContentHeaderStyles?:any
+  ContentTitleStyles?:any
+  
 }
 
 const GetCard=(props:cardprops)=> {
@@ -55,38 +58,38 @@ const GetCard=(props:cardprops)=> {
     
     <div >
       <div>
-  <p style={props.titlestyles}>{element.title}</p>
-  <p style={props.subtitle}>{element.subtitle}</p>
+  <p style={props.titleStyles}>{element.title}</p>
+  <p style={props.subtitleStyles}>{element.subtitle}</p>
      </div>
      <div className={classes.root}>
+     
       <Grid container spacing={3}>
       
-      <Grid item xs>
-      <Paper className={classes.paper}>
-          <h1>{props.contentdata[0].header}</h1>
-          <h3>{props.contentdata[0].title}</h3>
+        <Grid item xs>
+        <Paper className={classes.paper}>
+          <h1 style={props.ContentHeaderStyles}>{props.contentdata[0].header}</h1>
+          <h3 style={props.ContentTitleStyles}>{props.contentdata[0].title}</h3>
           <p>{props.contentdata[0].description}</p>
-      </Paper>
-          
+        </Paper>  
         </Grid>
         <Grid item xs>
         <Paper className={classes.paper}>
-        <h1>{props.contentdata[1].header}</h1>
-          <h3>{props.contentdata[1].title}</h3>
+          <h1 style={props.ContentHeaderStyles}>{props.contentdata[1].header}</h1>
+          <h3 style={props.ContentTitleStyles}>{props.contentdata[1].title}</h3>
           <p>{props.contentdata[1].description}</p>
         </Paper>
         </Grid>
         <Grid item xs>
         <Paper className={classes.paper}>
-        <h1>{props.contentdata[2].header}</h1>
-          <h3>{props.contentdata[2].title}</h3>
+          <h1 style={props.ContentHeaderStyles}>{props.contentdata[2].header}</h1>
+          <h3 style={props.ContentTitleStyles}>{props.contentdata[2].title}</h3>
           <p>{props.contentdata[2].description}</p>
         </Paper>
         </Grid>
         <Grid item xs>
         <Paper className={classes.paper}>
-        <h1>{props.contentdata[3].header}</h1>
-          <h3>{props.contentdata[3].title}</h3>
+          <h1 style={props.ContentHeaderStyles}>{props.contentdata[3].header}</h1>
+          <h3 style={props.ContentTitleStyles}>{props.contentdata[3].title}</h3>
           <p>{props.contentdata[3].description}</p>
          </Paper>
         </Grid>

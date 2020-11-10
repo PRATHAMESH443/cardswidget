@@ -1,3 +1,4 @@
+import { orange } from '@material-ui/core/colors';
 import React from 'react';
 import GetCard from './Card-widget';
 
@@ -28,7 +29,7 @@ const contentdata=[{
   description:"Simplify and automate student registration and certification."
 }];
 
-const titlestyles:any={
+const titleStyles:any={
   color:'orange',
   display:'flex',
   alignItem:'center',
@@ -39,7 +40,7 @@ const titlestyles:any={
   marginBottom: '0px'
 };
 
-const subtitle:any={
+const subtitleStyles:any={
   display:'flex',
   alignItem:'center',
   justifyContent: 'center',
@@ -49,14 +50,28 @@ const subtitle:any={
   margin:'2px 100px 15px 100px'
 }
 
+const ContentHeaderStyles:any={
+  fontWeight:'bold',
+  color:'orange'
+}
+
+const ContentTitleStyles:any={
+  fontWeight:'bold',
+  color:'black',
+  textTransform: 'uppercase'
+}
+
+
 function App() {
   return (
     <div>
      <GetCard 
         data={CardData}
-        titlestyles={titlestyles}
-        subtitle={subtitle}
+        titleStyles={titleStyles}
+        subtitleStyles={subtitleStyles}
         contentdata={contentdata}
+        ContentHeaderStyles={ContentHeaderStyles}
+        ContentTitleStyles={ContentTitleStyles}
      />
     </div>
   );
