@@ -38,7 +38,7 @@ type cardprops={
   data?:any
   titlestyles?:any
   subtitle?:any
-  contentdata?:any
+  contentdata:any
 }
 
 const GetCard=(props:cardprops)=> {
@@ -60,34 +60,34 @@ const GetCard=(props:cardprops)=> {
      </div>
      <div className={classes.root}>
       <Grid container spacing={3}>
-
+      
       <Grid item xs>
       <Paper className={classes.paper}>
-      <h1>01.</h1>
-          <h3>Optimize Processing</h3>
-          <p>Simplify and automate student registration and certification.</p>
+          <h1>{props.contentdata[0].header}</h1>
+          <h3>{props.contentdata[0].title}</h3>
+          <p>{props.contentdata[0].description}</p>
       </Paper>
           
         </Grid>
         <Grid item xs>
         <Paper className={classes.paper}>
-          <h1>02.</h1>
-          <h3>Optimize Processing</h3>
-          <p>Simplify and automate student registration and certification.</p>
+        <h1>{props.contentdata[1].header}</h1>
+          <h3>{props.contentdata[1].title}</h3>
+          <p>{props.contentdata[1].description}</p>
         </Paper>
         </Grid>
         <Grid item xs>
         <Paper className={classes.paper}>
-          <h1>03.</h1>
-          <h3>Optimize Processing</h3>
-          <p>Simplify and automate student registration and certification.</p>
+        <h1>{props.contentdata[2].header}</h1>
+          <h3>{props.contentdata[2].title}</h3>
+          <p>{props.contentdata[2].description}</p>
         </Paper>
         </Grid>
         <Grid item xs>
         <Paper className={classes.paper}>
-          <h1>04.</h1>
-          <h3>Optimize Processing</h3>
-          <p>Simplify and automate student registration and certification.</p>
+        <h1>{props.contentdata[3].header}</h1>
+          <h3>{props.contentdata[3].title}</h3>
+          <p>{props.contentdata[3].description}</p>
          </Paper>
         </Grid>
       </Grid>
